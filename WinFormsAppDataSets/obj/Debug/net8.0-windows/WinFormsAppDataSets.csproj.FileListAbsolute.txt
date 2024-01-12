@@ -1,0 +1,16 @@
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.Form1.resources
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.csproj.GenerateResource.cache
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.AssemblyInfoInputs.cache
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.AssemblyInfo.cs
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.csproj.CoreCompileInputs.cache
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\bin\Debug\net8.0-windows\WinFormsAppDataSets.exe
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\bin\Debug\net8.0-windows\WinFormsAppDataSets.deps.json
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\bin\Debug\net8.0-windows\WinFormsAppDataSets.runtimeconfig.json
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\bin\Debug\net8.0-windows\WinFormsAppDataSets.dll
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\bin\Debug\net8.0-windows\WinFormsAppDataSets.pdb
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.dll
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\refint\WinFormsAppDataSets.dll
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.pdb
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\WinFormsAppDataSets.genruntimeconfig.cache
+C:\DEV\WinFormsAppDataSets\WinFormsAppDataSets\obj\Debug\net8.0-windows\ref\WinFormsAppDataSets.dll
