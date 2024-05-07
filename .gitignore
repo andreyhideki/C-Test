@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/WinFormsAppDataSets/FileContentIndex/21a39e6e-0324-410d-b211-8bfcd6e06f98.vsidx
+/.vs
+/ConsoleAppExamples/bin/Debug/net8.0
+/ConsoleAppExamples/obj
