@@ -6,3 +6,10 @@
 /.vs
 /ConsoleAppExamples/bin/Debug/net8.0
 /ConsoleAppExamples/obj
+/WebApi/obj
+/WinFormsAppDataSets/obj/
+/WinFormsAppDataSets/obj/Debug/net8.0-windows/WinFormsAppDataSets.AssemblyInfo.cs
+/WinFormsAppDataSets/obj/Debug/net8.0-windows/WinFormsAppDataSets.AssemblyInfoInputs.cache
+/WinFormsAppDataSets/obj/Debug/net8.0-windows/WinFormsAppDataSets.assets.cache
+/WinFormsAppDataSets/obj/Debug/net8.0-windows/WinFormsAppDataSets.GeneratedMSBuildEditorConfig.editorconfig
+/WinFormsAppDataSets/obj/Debug/net8.0-windows/apphost.exe
