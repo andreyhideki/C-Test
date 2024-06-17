@@ -48,6 +48,7 @@ namespace WinFormsAppDataSets
             segmentoEurAnaliticaTable.Columns.Add("CodigoAutorizacao", typeof(string));
             segmentoEurAnaliticaTable.Columns.Add("TipoLancamento", typeof(string));
             segmentoEurAnaliticaTable.Columns.Add("ChaveUr", typeof(string));
+            segmentoEurAnaliticaTable.Columns.Add("TipoProduto", typeof(int));
 
             // Adicionar DataTable ao DataSet
             masterDataSet.Tables.Add(segmentoEurAnaliticaTable);
@@ -57,6 +58,7 @@ namespace WinFormsAppDataSets
                 segmentoDurAgendaTable.Columns["ChaveUr"],
                 segmentoEurAnaliticaTable.Columns["ChaveUr"]);
             masterDataSet.Relations.Add(relation);
+
         }
 
         private void LoadData()
@@ -75,9 +77,12 @@ namespace WinFormsAppDataSets
                     i * 100.0m,
                     i * 90.0m,
                     "01",
-                    "ChaveUrD" + i
+                    "ChaveUrD" + (i + 1)
                 );
             }
+
+            //var rand = new Random();
+            var randomnumber = new System.Random().Next(1, 10);
 
             // Adicionar dados de exemplo ao SEGMENTO E UR ANALITICA
             DataTable segmentoEurAnaliticaTable = masterDataSet.Tables["SegmentoEurAnalitica"];
@@ -90,14 +95,62 @@ namespace WinFormsAppDataSets
                     i,
                     "CodigoAutorizacaoE" + i,
                     "01",
-                    "ChaveUrD" + i
+                    "ChaveUrD" + (i + 1),
+                    new System.Random().Next(1, 4)
                 );
             }
+
+            DatasetAgrupado();
 
             // Vincular o DataSet ao DataGridView
             dataGridView1.DataSource = masterDataSet.Tables["SegmentoDurAgenda"];
             dataGridView2.DataSource = masterDataSet.Tables["SegmentoEurAnalitica"];
 
+        }
+
+        public void DatasetAgrupado()
+        {
+            //var agrupado = masterDataSet.Tables["SegmentoEurAnalitica"].AsEnumerable();
+            //var ag = agrupado
+            //    .GroupBy(g => new { TipoProduto = g["TipoProduto"] })
+            //    .Select(g => g.OrderBy(r => r["TipoProduto"]).First())
+            //    //.CopyToDataTable()
+            //    ;
+
+            var produtosAgrupados = masterDataSet.Tables["SegmentoEurAnalitica"].AsEnumerable()
+                .GroupBy(row => row.Field<int>("TipoProduto"))
+                .OrderBy(grupo => grupo.Key);
+
+            DataTable dtAgrupado = new DataTable("Agrupado");
+            dtAgrupado.Columns.Add("TipoRegistro", typeof(string));
+            dtAgrupado.Columns.Add("EstabelecimentoSubmissor", typeof(string));
+            dtAgrupado.Columns.Add("BandeiraLiquidacao", typeof(string));
+            dtAgrupado.Columns.Add("Parcela", typeof(int));
+            dtAgrupado.Columns.Add("CodigoAutorizacao", typeof(string));
+            dtAgrupado.Columns.Add("TipoLancamento", typeof(string));
+            dtAgrupado.Columns.Add("ChaveUr", typeof(string));
+            dtAgrupado.Columns.Add("TipoProduto", typeof(int));
+
+            // Adicionar DataTable ao DataSet
+            masterDataSet.Tables.Add(dtAgrupado);
+
+            foreach (var grupo in produtosAgrupados)
+            {
+                foreach (var produto in grupo)
+                {
+                    dtAgrupado.Rows.Add(
+                        produto.ItemArray[0],
+                        produto.ItemArray[1],
+                        produto.ItemArray[2],
+                        produto.ItemArray[3],
+                        produto.ItemArray[4],
+                        produto.ItemArray[5],
+                        produto.ItemArray[6],
+                        produto.ItemArray[7]
+                    );
+
+                }
+            }
         }
 
         private void BuscarNoDataSet(string tipoLancamento, string chaveUr)
