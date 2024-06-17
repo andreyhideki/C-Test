@@ -118,8 +118,8 @@ namespace WinFormsAppDataSets
             //    ;
 
             var produtosAgrupados = masterDataSet.Tables["SegmentoEurAnalitica"].AsEnumerable()
-                .GroupBy(row => row.Field<int>("TipoProduto"))
-                .OrderBy(grupo => grupo.Key);
+            .GroupBy(row => row.Field<int>("TipoProduto"))
+            .OrderBy(grupo => grupo.Key);
 
             DataTable dtAgrupado = new DataTable("Agrupado");
             dtAgrupado.Columns.Add("TipoRegistro", typeof(string));
@@ -133,6 +133,12 @@ namespace WinFormsAppDataSets
 
             // Adicionar DataTable ao DataSet
             masterDataSet.Tables.Add(dtAgrupado);
+
+            //verifica se tem mais de um tipo
+            //if (produtosAgrupados.Count() > 1)
+            //{
+                
+            //}
 
             foreach (var grupo in produtosAgrupados)
             {
