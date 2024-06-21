@@ -1,15 +1,12 @@
 ﻿using ConsoleAppExamples.Model.Enums;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleAppExamples.Model.Comparativos
 {
     public class EnumCompare
     {
+        //Comparativo visa testar a velocidade para retornar a descricao do enum
+
         string EnumComToString()
         {
             return ETipoPagamento.Dinheiro.ToString();
