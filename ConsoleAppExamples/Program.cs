@@ -1,18 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Diagnostics;
 using ConsoleAppExamples.Model;
+using ConsoleAppExamples.Model.Comparativos;
+using ConsoleAppExamples.Model.Enums;
 using ConsoleAppExamples.Model.Override;
 
-Dog dog = new Dog();
-Cat cat = new Cat();
-dog.Speak();
-cat.Speak();
+EnumCompare ec = new EnumCompare();
+ec.CompararTempos();
 
-//Quando abstrato precisa implementar a funcao
-DogAbstract dogAbstract = new DogAbstract();
-CatAbstract catAbstract = new CatAbstract();
-dogAbstract.Speak();
-catAbstract.Speak();
+//TesteAbstract();
 
 //Console.WriteLine("Hello, World!");
 
@@ -32,3 +29,18 @@ catAbstract.Speak();
 //    Console.WriteLine(item.ToString());
 
 //}
+
+static void TesteAbstract()
+{
+    Dog dog = new Dog();
+    Cat cat = new Cat();
+    dog.Speak();
+    cat.Speak();
+
+    //Quando abstrato precisa implementar a funcao
+    DogAbstract dogAbstract = new DogAbstract();
+    CatAbstract catAbstract = new CatAbstract();
+    dogAbstract.Speak();
+    catAbstract.Speak();
+}
+
