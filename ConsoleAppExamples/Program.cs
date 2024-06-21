@@ -6,8 +6,11 @@ using ConsoleAppExamples.Model.Comparativos;
 using ConsoleAppExamples.Model.Enums;
 using ConsoleAppExamples.Model.Override;
 
-EnumCompare ec = new EnumCompare();
-ec.CompararTempos();
+//EnumCompare ec = new EnumCompare();
+//ec.CompararTempos();
+
+StringCompare sc = new StringCompare();
+sc.CompararStrings();
 
 //TesteAbstract();
 
